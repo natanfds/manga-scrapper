@@ -1,5 +1,5 @@
 {
-  "name": "reddit-scrapper",
+  "name": "manga-scrapper",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,6 +18,7 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
+    "axios": "^1.8.2",
     "dotenv": "^16.4.7",
     "playwright": "^1.51.0",
     "zod": "^3.24.2"
