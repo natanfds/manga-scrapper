@@ -1,3 +1,4 @@
+import { IBotRequestReturn } from "../types";
 import { throwErrorIfNotOverwrite } from "../utils";
 
 export class DefaultBot {
@@ -6,7 +7,16 @@ export class DefaultBot {
     this.infoURL = infoURL
   }
 
-  async getAllChaptersInfo(): Promise<any>{
+  async getAllChaptersInfo(): Promise<IBotRequestReturn<any>>{
     throwErrorIfNotOverwrite()
+    return {
+      success: false,
+      data: {
+        status: 0,
+        statusText: "",
+        url: "",
+        data: ""
+      }
+    }
   }
 }
