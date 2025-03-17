@@ -9,7 +9,7 @@ axios.defaults.validateStatus = (status) => true;
 
 (async () => {
   const a = new CubariMoeBot("https://raw.githubusercontent.com/neiloweeen/Richeh/refs/heads/main/Witch-Hat-Atelier.json");
-  const data = await a.downloadNChapter(1);
+  const data = await a.downloadNChapter(3);
   console.log(data);
   process.exit()
   const browser = await chromium.launch({

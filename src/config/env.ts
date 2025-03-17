@@ -15,6 +15,7 @@ const envSchema = z.object({
   }, {
       message: "Download folder doesn`t exists",
   }),
+  LOG_FILE: z.string()
 })
 
 const envValidation = envSchema.safeParse(process.env)
