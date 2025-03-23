@@ -1,16 +1,13 @@
-import {env} from "./config";
 import axios from 'axios';
-import { chromium } from 'playwright';
-import { CubariMoeBot } from "./bots/cubariMoe";
-import { MangaPlus } from "./bots/mangaPlus";
+import { MangaDexBot } from './bots';
 
 
 axios.defaults.validateStatus = (status) => true;
 
 
 (async () => {
-  const bot = new MangaPlus();
-  const data = bot.checkForUpdates();
+  const bot = new MangaDexBot("Mairimashita! Iruma-kun");
+  await bot.downloadNChapter(1);
 
 
 })();
