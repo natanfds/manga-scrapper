@@ -19,4 +19,8 @@ export class DefaultBot {
       }
     }
   }
+
+  async downloadNChapter(n: number): Promise<any>{
+    throwErrorIfNotOverwrite()
+  }
 }

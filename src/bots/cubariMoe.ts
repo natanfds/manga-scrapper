@@ -27,9 +27,6 @@ export class CubariMoeBot extends DefaultBot{
     }
   }
 
-  async downloadPages(): Promise<any>{
-    
-  }
 
   async downloadNChapter(n: number): Promise<any>{
     const mangaInfo = await this.getAllChaptersInfo()
@@ -46,7 +43,6 @@ export class CubariMoeBot extends DefaultBot{
     const mangaTitle = (mangaInfo.data as ICubariMoeManga).title
     const chapterFolderName = genChapterFolderName(n, chapterInfo.title, mangaTitle)
     
-
     for(const [i, url] of pagesURLs.entries()){
       const fileFormat = url.split(".").pop()
       await downloadImage(
